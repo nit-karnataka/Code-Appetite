@@ -1,0 +1,37 @@
+{% load static %}
+<html>
+    <head>
+        <title>MedRecords | Upload PDF</title>
+        <link rel="stylesheet" href="{% static 'css/upload.css' %}">
+    
+
+    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+<link rel="icon" href="{% static 'img/favicon.ico' %}" type="image/x-icon">
+
+    </head>
+<body>
+    
+    
+    <div id="header">
+        <div id="branding">
+        
+<h1 id="site-name"><a href="http://127.0.0.1:8000">MedRecords</a></h1>
+
+        </div><div class="login"><a class="btn btn-default action-button" role="button" href="http://127.0.0.1:8000/admin">Sign In</a></div>
+        
+        
+    </div>
+<div class=container>
+    <h1>Upload a PDF Document :</h1>
+    
+    
+    <form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+<input type="file" name="document" multiple>
+ <button type="submit">Upload</button>
+    
+    </form></div>
+
+</body>
+</html>
